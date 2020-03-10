@@ -1,5 +1,6 @@
 package gume;
 
+
 /**
  * Date: March 10-2020
  * Klasa AutoGuma sa svojim funkcionalnostima.
@@ -54,7 +55,7 @@ public class AutoGuma {
 	 * @throws java.lang.RuntimeException baca izuzetak u slucaju unosa precnika  manjeg od 13 ili veceg od 22.
 	 */
 	public void setPrecnik(int precnik) {
-	if (precnik < 13 && precnik > 22)
+	if (precnik < 13 || precnik > 22)
 	throw new RuntimeException("Precnik van opsega");
 	this.precnik = precnik;
 	}
@@ -62,6 +63,9 @@ public class AutoGuma {
 	 * vraca sirinu gume.
 	 * @return sirina gume.
 	 */
+	public int getSirina() {
+		return sirina;
+	}
 	/**
 	 * Postavlja sirinu gume na zadatu vrednost.
 	 * @param sirina nova vrednost za sirinu gume.
